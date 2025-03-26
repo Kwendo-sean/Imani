@@ -12,28 +12,30 @@
             background: linear-gradient(135deg, #ff758c, #ff7eb3);
             color: #fff;
             text-align: center;
-            padding: 30px;
+            padding: 20px;
             overflow-x: hidden;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         h1 {
             font-family: 'Dancing Script', cursive;
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 20px;
         }
 
         .choice-container {
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         .choice-button {
-            font-size: 1.5rem;
-            padding: 15px 25px;
+            font-size: 1.3rem;
+            padding: 12px 20px;
             border: none;
-            border-radius: 15px;
+            border-radius: 12px;
             cursor: pointer;
-            margin: 10px;
+            margin: 8px;
+            width: 90%;
+            max-width: 300px;
             transition: transform 0.3s ease;
             background: #ff69b4;
             color: white;
@@ -46,7 +48,7 @@
         }
 
         .choice-button:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .hidden {
@@ -54,28 +56,28 @@
         }
 
         .question-container {
-            margin-top: 30px;
+            margin-top: 20px;
             display: none;
         }
 
         .image-container {
-            margin-top: 20px;
+            margin-top: 15px;
             display: none;
         }
 
         .image-container img {
-            width: 250px;
-            height: auto;
-            border-radius: 15px;
+            width: 80%;
+            max-width: 250px;
+            border-radius: 12px;
             border: 3px solid white;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         }
 
         .yay-text {
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: bold;
             color: yellow;
-            margin-top: 20px;
+            margin-top: 15px;
             display: none;
             animation: fadeIn 1.5s ease-in-out;
         }
@@ -87,42 +89,46 @@
 
         /* Fake Credit Card Info */
         .credit-card-prank {
-            font-size: 1.2rem;
-            margin-top: 20px;
+            font-size: 1rem;
+            margin-top: 15px;
             color: black;
             background: #fff;
             padding: 10px;
             border-radius: 8px;
             display: none;
             animation: fadeIn 2s ease-in-out;
+            width: 80%;
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Spotify Music Player */
         .music-container {
-            margin-top: 30px;
+            margin-top: 20px;
             display: none;
         }
 
         .spotify-player {
             border-radius: 12px;
-            width: 100%;
-            max-width: 320px;
-            height: 152px;
+            width: 90%;
+            max-width: 300px;
+            height: 100px;
             border: none;
             display: block;
             margin: 0 auto;
         }
 
-        /* Confetti Effect (Now Runs Forever) */
+        /* Confetti Effect (Now Runs Forever but Optimized for Phones) */
         .confetti {
             position: fixed;
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             background: #ff69b4;
             opacity: 0.7;
             border-radius: 50%;
             top: -10px;
-            animation: fall 3s linear infinite;
+            animation: fall 5s linear infinite;
         }
 
         @keyframes fall {
@@ -141,25 +147,25 @@
 
     <h1>Hey Imani... 💖</h1>
 
-    <h2>You have two choices... Choose wisely!</h2>
+    <h2>Pick One Here Baby </h2>
 
     <div class="choice-container">
-        <button class="choice-button" onclick="startJourney()"> Go on a journey to find out why you're amazing!</button>
+        <button class="choice-button" onclick="startJourney()">Go on a journey to find out why you're amazing!</button>
         <button class="choice-button" onclick="askOut()"> Click here for a surprise!</button>
     </div>
 
     <div id="journey" class="hidden">
-        <h2>✨  You are literally the most beautiful person ever. </h2>
-        <h2>✨  Your have the bestest smile ever. </h2>
-        <h2>✨  You make my world 100x better just by existing. </h2>
-        <h2>✨  Uuuurrrrggghhhhhh.. I can't hold it in anymore...</h2>
-        <button class="choice-button" onclick="askOut()">🥺 Click to see what I'm REALLY trying to say!</button>
+        <h2> You are literally the most beautiful person ever. </h2>
+        <h2> Your smile is the bestest everrrrrr. </h2>
+        <h2> You make my world 100x better just by existing. </h2>
+        <h2> Uurrghhhhhhh... I can't hold it in anymore...</h2>
+        <button class="choice-button" onclick="askOut()"> Click to see what I'm REALLY trying to say!</button>
     </div>
 
     <div id="question" class="question-container">
-        <h1>Imani... Will you be my girlfriend? 😘</h1>
-        <button class="choice-button" onclick="celebrate()">💖 YES 💖</button>
-        <button class="choice-button no-button" onclick="moveNoButton()"> No (you can’t say no baby!)</button>
+        <h1>Imani... Will you be the other side of my smile? 😘</h1>
+        <button class="choice-button" onclick="celebrate()"> YES </button>
+        <button class="choice-button no-button" onclick="moveNoButton()"> No (You can’t say no darling!)</button>
     </div>
 
     <div id="yayText" class="yay-text">YAAAAAAAAAYYYYYYYYYYYYY!!!!! 🎉🎉🎉</div>
@@ -171,16 +177,16 @@
 
     <!-- Spotify Song (NFR - Lana Del Rey) -->
     <div id="music" class="music-container">
-        <h2>🎶 And now... a song just for you, I mean US!!!🎶</h2>
+        <h2>🎶 And now... a song just for you!I mwan for USSSSS 🎶</h2>
         <iframe class="spotify-player" src="https://open.spotify.com/embed/track/1LzNfuep1bnAUR9skqdHCK?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
 
     <!-- Prank Fake Credit Card Info -->
     <div id="creditCard" class="credit-card-prank">
-        <h3>💳 Since you said yes, here’s my credit card info: </h3>
+        <h3>💳 Since you said yes, here’s half my credit card info: </h3>
         <p><strong>Card Number:</strong> 4928 3749 8293 ****</p>
         <p><strong>Expiration Date:</strong> 07/29</p>
-        <p><strong>CVV:</strong> YOOH YOOHHHHH IM KIDDINGGGGGGGG,I LOVE YOU BABYY </p>
+        <p><strong>CVV:</strong> YOOH YOOOH IM KIDDINGGGGGGGG,I LOVE YOU BABY,MAKING THIS WEBSITE MAKES ME WANNA CRY</p>
     </div>
 
     <script>
@@ -198,7 +204,7 @@
             document.getElementById("image").style.display = "block";
             document.getElementById("music").style.display = "block";
             document.getElementById("creditCard").style.display = "block";
-            setInterval(createConfetti, 200);
+            setInterval(createConfetti, 300);
         }
 
         function createConfetti() {
@@ -206,12 +212,6 @@
             confetti.classList.add("confetti");
             confetti.style.left = Math.random() * 100 + "vw";
             document.body.appendChild(confetti);
-        }
-
-        function moveNoButton() {
-            let button = document.querySelector(".no-button");
-            button.style.left = Math.random() * (window.innerWidth - 150) + "px";
-            button.style.top = Math.random() * (window.innerHeight - 150) + "px";
         }
     </script>
 
